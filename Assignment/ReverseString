@@ -1,0 +1,21 @@
+def revrev(to_rev):
+    """
+    Reverse order of letters in word,but keep words in the same original order
+    Example
+    Input:  "The quick brown fox"
+    Output: "ehT kciuq nworb xof"
+
+    Explanation :
+    1.splitting the sentence into characters using split method
+    2.Reversing each word using for loop
+    3.Then joining the characters back
+    """
+    chars = to_rev.split(' ')
+    sentence = [char[::-1] for char in chars]
+    reverse_sequence = ' '.join(sentence)
+    return reverse_sequence
+
+
+if __name__ == "__main__":
+    to_rev = "ehT kciuq nworb xof"  #Input
+    print(revrev(to_rev))           #Output  - The quick brown fox
